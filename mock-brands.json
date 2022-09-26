@@ -1,0 +1,40 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "brand": "Audi",
+      "country": [
+        {
+          "id": 1,
+          "countryName": "Germany"
+        }
+      ],
+      "url": "audi.com",
+      "logoUrl": "audi.jpg"
+    },
+    {
+      "id": 2,
+      "brand": "BMW",
+      "country": [
+        {
+          "id": 1,
+          "countryName": "Germany"
+        }
+      ],
+      "url": "bmw.com",
+      "logoUrl": "bmw.jpg"
+    },
+    {
+      "id": 2,
+      "brand": "Citroen",
+      "country": [
+        {
+          "id": 2,
+          "countryName": "France"
+        }
+      ],
+      "url": "citroen.com",
+      "logoUrl": "citroen.jpg"
+    }
+  ]
+}

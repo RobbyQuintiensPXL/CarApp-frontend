@@ -1,0 +1,29 @@
+<header class="header header-6">
+  <div class="branding">
+    <a href="..." class="nav-link">
+      <clr-icon shape="vm-bug"></clr-icon>
+      <span class="title">CarApp</span>
+    </a>
+  </div>
+  <div class="header-nav">
+    <a href="..." class="active nav-link" aria-current="page"><span class="nav-text">Zoek auto</span></a>
+    <a href="..." class="nav-link"><span class="nav-text">Service</span></a>
+  </div>
+  <form class="search">
+    <label for="search_input">
+      <input id="search_input" type="text" placeholder="Search for keywords...">
+    </label>
+  </form>
+  <div class="header-actions">
+    <clr-dropdown>
+      <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
+        john.doe@gmail.com
+        <clr-icon shape="caret down"></clr-icon>
+      </button>
+      <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+        <a href="..." clrDropdownItem>Preferences</a>
+        <a href="..." clrDropdownItem>Log out</a>
+      </clr-dropdown-menu>
+    </clr-dropdown>
+  </div>
+</header>

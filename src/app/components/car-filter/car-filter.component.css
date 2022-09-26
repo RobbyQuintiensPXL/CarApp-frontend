@@ -1,0 +1,24 @@
+
+.clr-accordion-title {
+  font-size: 12pt !important;
+  color: #0c0c0c;
+}
+
+.searchDiv {
+  width: 75%;
+  position: relative;
+  margin: auto;
+}
+
+.searchBtn {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.selectList {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #cbcbcb;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.25rem;
+}

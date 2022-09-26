@@ -27,9 +27,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@clr/icons/clr-icons.min.css",
+              "node_modules/@clr/ui/clr-ui.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@clr/icons/clr-icons.min.js",
+              "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
+              "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -66,6 +72,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "your-application-name:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "carApp:build:production"
@@ -102,5 +112,7 @@
       }
     }
   },
-  "defaultProject": "carApp"
+  "cli": {
+    "analytics": "b1c237b2-046f-4694-8ce2-ebf6657db937"
+  }
 }

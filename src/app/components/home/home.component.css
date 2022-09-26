@@ -1,0 +1,13 @@
+.filter {
+  margin: 2.2rem;
+}
+
+.content {
+  margin: 1rem;
+  padding-right: 2rem;
+}
+
+.content-container {
+  overflow: hidden;
+}
+
