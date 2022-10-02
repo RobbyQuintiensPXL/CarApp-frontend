@@ -11,6 +11,7 @@ import { CarFilterComponent } from './components/car-filter/car-filter.component
 import {FormsModule} from "@angular/forms";
 import { CarCardComponent } from './components/car-card/car-card.component';
 import { CarCardListComponent } from './components/car-card-list/car-card-list.component';
+import {PaginatorModule} from "primeng/paginator";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CarCardListComponent } from './components/car-card-list/car-card-list.c
     AppRoutingModule,
     BrowserAnimationsModule,
     ClarityModule,
-    FormsModule
+    FormsModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

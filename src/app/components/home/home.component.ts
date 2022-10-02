@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  msgBrand: any;
 
   constructor() {
   }
@@ -13,4 +14,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addBrand(brand: string) {
+    this.msgBrand = brand;
+    console.log(this.msgBrand);
+  }
 }

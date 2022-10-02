@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {catchError} from "rxjs/operators";
 import {Product} from "../../models/product/product";
+import {PagedProduct} from "../../components/car-card-list/car-card-list.component";
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,9 @@ export class ProductService {
     this.urlProducts = 'car/public/products/';
   }
 
-  getAllProducts(): Observable<any> {
-    return this.http.get<any>(this.urlProducts).pipe(
+  getAllProducts(param?: any): Observable<PagedProduct> {
+    const search = 'search'
+    return this.http.get<any>(this.urlProducts + search, {params: param}).pipe(
       catchError(error => {
         return throwError('No Products Found');
       })

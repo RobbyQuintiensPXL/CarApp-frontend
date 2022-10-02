@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FilterService} from "../../services/filter-service/filter.service";
 import {Brand} from "../../models/brand/brand";
 import {Model} from "../../models/model/model";
@@ -9,6 +9,7 @@ import {Model} from "../../models/model/model";
   styleUrls: ['./car-filter.component.css']
 })
 export class CarFilterComponent implements OnInit {
+  @Output() paramsOutput = new EventEmitter<any>();
   brands: Brand[] | undefined;
   models: Model[] | undefined;
   model: Model | undefined;
@@ -39,7 +40,16 @@ export class CarFilterComponent implements OnInit {
     this.brandSelected = true;
   }
 
-  getParams() {
-    console.log('params');
+  getParams(brand?: string, model?: string) {
+    const params: any = {};
+    if (brand) {
+      params.brand = brand;
+    }
+    if (model) {
+      params.model = model;
+    }
+    this.paramsOutput.emit(params);
   }
+
+
 }

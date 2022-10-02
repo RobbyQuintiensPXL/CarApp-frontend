@@ -4,13 +4,14 @@
       <clr-accordion-title>Merk & Model</clr-accordion-title>
       <clr-accordion-content>
         <select id="brand" class="selectList" #selectedBrand (change)="onChangeBrand(selectedBrand.value)">
-          <option selected="selected" disabled="disabled" class="default">Merk</option>
-          <option *ngFor="let brand of brands" [value]="brand.brand">{{brand.brand}}</option>
+          <option selected="selected" disabled="disabled" class="default" value="">Merk</option>
+          <option value="">Alle merken</option>
+          <option *ngFor="let brand of brands" [value]="brand.id">{{brand.brand}}</option>
         </select>
-        <select id="model" class="selectList">
-          <option selected="selected" disabled="disabled" class="default">Model</option>
-          <option *ngIf="brandSelected" value="all">Alle modellen</option>
-          <option *ngFor="let model of models" [value]="model.model">{{model.model}}</option>
+        <select id="model" class="selectList" #selectedModel>
+          <option selected="selected"  disabled="disabled" class="default" value="">Model</option>
+          <option *ngIf="brandSelected" value="">Alle modellen</option>
+          <option *ngFor="let model of models" [value]="model.id">{{model.model}}</option>
         </select>
       </clr-accordion-content>
     </clr-accordion-panel>
@@ -47,7 +48,7 @@
     </clr-accordion-panel>
   </clr-accordion>
   <div class="searchDiv">
-    <button class="btn btn-primary searchBtn" (click)="getParams()">Zoeken</button>
+    <button class="btn btn-primary searchBtn" (click)="getParams(selectedBrand.value, selectedModel.value)">Zoeken</button>
     <button class="btn btn-secondary searchBtn">Reset</button>
   </div>
 </form>
