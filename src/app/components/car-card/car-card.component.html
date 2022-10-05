@@ -1,4 +1,4 @@
-<div class="card clickable">
+<div class="card clickable" [routerLink]="['../detail',product.id]">
   <h4 class="card-header">{{product.brand.brand}} {{product.model.model}}</h4>
   <div class="card-block">
     <h5 class="card-title">{{product.version.versionName}} {{product.version.label}}</h5>
@@ -12,5 +12,3 @@
     <h5>{{product.price}} EUR</h5>
   </div>
 </div>
-
-

@@ -18,9 +18,17 @@ export class ProductService {
 
   getAllProducts(param?: any): Observable<PagedProduct> {
     const search = 'search'
-    return this.http.get<any>(this.urlProducts + search, {params: param}).pipe(
+    return this.http.get<PagedProduct>(this.urlProducts + search, {params: param}).pipe(
       catchError(error => {
         return throwError('No Products Found');
+      })
+    );
+  }
+
+  getProductById(id: number): Observable<Product> {
+    return this.http.get<Product>(this.urlProducts + id).pipe(
+      catchError(error => {
+        return throwError('No Product Found');
       })
     );
   }
