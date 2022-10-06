@@ -14,6 +14,7 @@ import {PaginatorModule} from "primeng/paginator";
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutes} from "./app.routes";
+import { CarSearchComponent } from './components/car-search/car-search.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {AppRoutes} from "./app.routes";
     CarFilterComponent,
     CarCardComponent,
     CarCardListComponent,
-    CarDetailComponent
+    CarDetailComponent,
+    CarSearchComponent
   ],
   imports: [
     BrowserModule,

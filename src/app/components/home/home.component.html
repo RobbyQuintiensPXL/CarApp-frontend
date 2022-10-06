@@ -1,12 +1,1 @@
-<div class="content-container">
-  <div class="clr-row">
-    <div class="clr-col-3 filter">
-      <app-car-filter (paramsOutput)="addBrand($event)"></app-car-filter>
-    </div>
-    <div class="clr-col content">
-      <app-car-card-list [params]="msgBrand" ></app-car-card-list>
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-</div>
-
+<app-car-search></app-car-search>
