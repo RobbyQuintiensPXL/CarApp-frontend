@@ -1,8 +1,41 @@
 .content {
   margin: 1rem;
   padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
 .content-container {
   overflow: hidden;
+}
+
+.car-images {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 1rem 0 0 1rem;
+}
+
+.car-img-head img {
+  border-radius: 5px !important;
+  margin: 0.5rem 0 0.5rem 0;
+  overflow: hidden;
+  height: 300px;
+  width: 500px;
+  object-fit: cover;
+}
+
+.car-img-thumb img {
+  border-radius: 5px !important;
+  overflow: hidden;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card {
+  width: 100% !important;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
 }

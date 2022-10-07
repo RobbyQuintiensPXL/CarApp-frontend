@@ -1,3 +1,37 @@
 <div class="content-container">
-  <p>{{product.brand.brand}} {{product.model.model}}</p>
+  <div class="content">
+    <div class="car-images">
+      <div class="car-img-head">
+        <img
+          src="http://localhost:9080/car/public/files/{{product.images[0]}}"
+          alt="..."/>
+      </div>
+      <div class="car-img-thumb">
+        <img
+          src="http://localhost:9080/car/public/files/{{product.images[1]}}"
+          alt="..."/>
+      </div>
+    </div>
+    <div class="car-detail">
+      <div class="card">
+        <h2 class="card-header">{{product.brand.brand}} {{product.model.model}}
+          <span><h4 class="card-title">{{product.version.versionName}} {{product.version.label}}</h4></span></h2>
+        <div class="card-block">
+          <h5>Beschrijving:</h5>
+          <p>Son, as your lawyer, I declare y'all are in a 12-piece bucket o' trouble. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused. You're going back for the Countess, aren't you?
+
+            Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! It must be wonderful. Ask her how her day was. What kind of a father would I be if I said no?</p>
+        </div>
+        <div class="card-footer">
+          <h5>Speficaties:</h5>
+          <ul>
+            <li>{{product.transmission.toLowerCase()}}</li>
+            <li>{{product.numberDoors}} deuren</li>
+            <li>{{product.firstRegistration}}</li>
+            <li>{{product.numberKm}} km</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
